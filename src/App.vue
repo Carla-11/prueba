@@ -8,7 +8,7 @@
       </h4>
 
       <h1 class="my-2">REGISTRATE AQUÍ</h1>
-      <form class="container" @submit.prevent="agregarRespuesta">
+      <form id="myForm" class="container" @submit.prevent="agregarRespuesta" >
         <p class="text-dark">Campos Obligatorios*</p>
         <div class="row justify-content-center">
           <div class="col-12 col-md-4">
@@ -180,6 +180,12 @@ export default {
     };
   },
   methods: {
+
+      limpiar(){
+         document.getElementById("myForm").reset();
+      },
+ 
+
     agregarRespuesta() {
       if (
         this.apellido &&
@@ -211,12 +217,25 @@ export default {
             console.log(resp);
             alert("Datos enviados con exito");
             
+            
           })
           .catch((error) => console.error(error));
         console.log("listo");
         console.log(this.acepto);
+         this.nombre="";
+      this.apellido="";
+      this.rut= "";
+      this.telefono= "";
+      this.direccion= "";
+     this.region= "";
+     this.comuna= "";
+    this.email= "";
+     this.cemail= "";
+     this.acepto= "";
+      this.acepto1= "";
+        
       } else {
-        alert("COMPLETAR TODOS LOS CAMPOS");
+        alert("COMPLETAR TODOS LOS CAMPOS Y VERIFIQUE CORREO INGRESADO");
       }
     },
   },
