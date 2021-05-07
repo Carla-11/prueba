@@ -235,7 +235,7 @@ export default {
       this.acepto1= "";
         
       } else {
-        alert("COMPLETAR TODOS LOS CAMPOS Y VERIFIQUE CORREO INGRESADO");
+        alert("COMPLETAR TODOS LOS CAMPOS Y VERIFIQUE CORREO INGRESADO...");
       }
     },
   },
