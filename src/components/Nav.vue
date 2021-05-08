@@ -30,5 +30,15 @@ img {
     margin-left: 15px;
     margin-top: 0;
   }
+
+  .in{
+
+align: center;
+width: 230px;
+margin-bottom:3px
+}
+
+
+
 }
 </style>

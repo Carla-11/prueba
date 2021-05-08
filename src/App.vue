@@ -8,11 +8,11 @@
       </h4>
 
       <h1 class="my-2">REGISTRATE AQUÍ</h1>
-      <form id="myForm" class="container" @submit.prevent="agregarRespuesta" >
+      <form id="myForm" class="container " @submit.prevent="agregarRespuesta" >
         <p class="text-dark">Campos Obligatorios*</p>
         <div class="row justify-content-center">
-          <div class="col-12 col-md-4">
-            <div class="form-group">
+          <div class="col-8 col-md-4 ">
+            <div class="form-group in rounded-pill">
               <input
                id="snombre"
                 v-model="nombre"
@@ -22,22 +22,22 @@
               />
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="form-group in">
+          <div class="col-8 col-md-4">
+            <div class="form-group in rounded-pill">
               <input
                id="snombre"
                 v-model="apellido"
                 type="text"
                 class="form-control icon-placeholder-name rounded-pill"
-                placeholder="Apellido"
+                placeholder="Apellido*"
               />
             </div>
           </div>
         </div>
 
         <div class="row justify-content-center my-2">
-          <div class="col-12 col-md-4">
-            <div class="form-group">
+          <div class="col-8 col-md-4">
+            <div class="form-group in rounded-pill">
               <input
                id="snombre"
                 v-model="rut"
@@ -47,8 +47,8 @@
               />
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="form-group in">
+          <div class="col-8 col-md-4">
+            <div class="form-group in rounded-pill">
               <input
                 id="snombre"
                 v-model="telefono"
@@ -60,8 +60,8 @@
           </div>
         </div>
         <div class="row justify-content-center my-2">
-          <div class="col-12 col-md-4">
-            <div class="form-group">
+          <div class="col-8 col-md-4 ">
+            <div class="form-group in rounded-pill">
               <input
                id="snombre"
                 v-model="direccion"
@@ -71,8 +71,8 @@
               />
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="form-group in">
+          <div class="col-8 col-md-4">
+            <div class="form-group in rounded-pill">
               <input
                id="snombre"
                 v-model="region"
@@ -84,8 +84,8 @@
           </div>
         </div>
         <div class="row justify-content-center my-2">
-          <div class="col-12 col-md-4">
-            <div class="form-group">
+          <div class="col-8 col-md-4">
+            <div class="form-group in rounded-pill">
               <input
                id="snombre"
                 v-model="comuna"
@@ -95,8 +95,8 @@
               />
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="form-group in ">
+          <div class="col-8 col-md-4">
+            <div class="form-group in rounded-pill ">
               <input
                id="snombre"
                 v-model="email"
@@ -109,9 +109,9 @@
         </div>
 
         <div class="row justify-content-center">
-          <div class="col-12 col-md-4">
+          <div class="col-8 col-md-4">
             <div class="form-group">
-              <div class="my-2">
+              <div class="my-2 in rounded-pill">
                 <input
                  id="snombre"
                   v-model="cemail"
@@ -235,6 +235,7 @@ export default {
       this.acepto1= "";
         
       } else {
+
         alert("COMPLETAR TODOS LOS CAMPOS Y VERIFIQUE CORREO INGRESADO...");
       }
     },
@@ -331,7 +332,9 @@ img {
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #909;
 }
-  
+.in{
+border: 3px solid #79a52b;
+}
   
 
 .link {
@@ -355,7 +358,7 @@ button {
 label {
   font-family: metropolis-semibold;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   #app {
     background-image: url(./assets/encuesta-productostottus-mob.png);
     background-repeat: no-repeat;
@@ -363,17 +366,31 @@ label {
     background-color: #edf3ec;
 
     color: #79a52b;
+
+   
   }
+
+.form-control{
+  align: center;
+  height: 25px
+
+}
+
+.in{
+
+align: center;
+width: 230px;
+margin-bottom:3px
+}
+
 
   img {
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 80px;
   }
 
-  .form-group {
-    align-items: center;
 
-    width: 300px;
-  }
+
+
 }
 </style>
